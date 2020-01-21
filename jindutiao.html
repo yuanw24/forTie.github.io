@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var count = 0;
+            function change() {
+                var result = "";
+                var index = 0;
+                while (index < count % 20) {
+                    result += "-";
+                    index ++;
+                }
+                result += "x";
+                index++;
+                while (index < 20) {
+                    result += "-";
+                    index++;
+                }
+                count++;
+                document.getElementById("jindutiao").innerHTML = result;
+                return result;
+            }
+            var a = setInterval(change, 500);
+            function stop() {
+                clearInterval(a);
+                document.getElementById("loveyou").innerHTML = "LOVE YOU TIETIE!";
+            }
+            setTimeout(stop, 10000);
+        </script>
+        <h3 id="jindutiao">xxxxxxxxxxxxxxxxxxxx</h3>
+        <h1 id="loveyou"></h1>
+    </body>
+</html>
